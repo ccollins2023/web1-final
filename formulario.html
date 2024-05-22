@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Presupuesto</title>
+    <link rel="stylesheet" href="trabajofinal.css">
+</head>
+
+<body>
+    <span class="ir-arriba icon-arrow-up2"></span>
+
+    <header class="sticky-header">
+        <h1><span class="palabra-marca">"SafeZone </span>  <i> Sistemas de Seguridad y Alarmas"</i></h1> <!--primer palabra-->
+    </header>
+    <nav class="navbar">
+        <div class="container">
+            <img src="img/LOGOTIPO.png" alt="Logo de la empresa" class="logo">
+        </div>
+    </nav>
+    
+    
+    <section id="presupuesto" class="formulario-container">
+        
+        <div class="container">
+            <h2>Generador de Presupuestos</h2>
+            <p>¿Interesado en nuestros servicios? Completa el siguiente formulario y te enviaremos un presupuesto personalizado en poco tiempo:</p>
+            <form id="form-presupuesto" novalidate>
+                <label for="nombre-presupuesto">Nombre:</label>
+                <input type="text" id="nombre-presupuesto" name="nombre" required placeholder="Obligatorio, máximo 30 caracteres">
+
+                <label for="email-presupuesto">Correo electrónico:</label>
+                <input type="email" id="email-presupuesto" name="email" required placeholder="Obligatorio">
+
+                <label for="telefono-presupuesto">Teléfono:</label>
+                <input type="tel" id="telefono-presupuesto" name="telefono" required placeholder="Obligatorio">
+
+                <label for="servicio-presupuesto">Servicio de interés:</label>
+                <select id="servicio-presupuesto" name="servicio" onchange="actualizarCampos()">
+                    <option value="InstaCamaras">Instalación de Cámaras,  -- (Instalación Gratis)--</option>
+                    <option value="Cámaras">Configuración de cámaras de seguridad,  -- ($5000c/u)--</option>
+                    <option value="Cercos">Implementación de cercos eléctricos,  -- ($20000 por m2)--</option>
+                    <option value="Monitoreo">Monitoreo remoto 24/7 --($7000 mensual)</option>
+                    <option value="Asesoramiento">Asesoramiento en seguridad privada --($12000 por c/Custodia)--</option>
+                    <option value="AlarmaResidencial">Alarmas Residenciales --($95000 c/u)--</option>
+                    <option value="AlarmaComercial">Alarmas Comerciales --($120000 c/u)--</option>
+                </select>
+
+                <label for="cantidad-metros">Cantidad de metros de cerco eléctrico:</label>
+                <select id="cantidad-metros" name="cantidad-cerco" disabled>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <label for="cantidad-camara">Cantidad de cámaras:</label>
+                <select id="cantidad-camara" name="cantidad-camara" disabled>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <label for="tipo-camara">Tipo de alarma:</label>
+                <select id="tipo-camara" name="tipo-camara" disabled>
+                    <option value="camara-fija">Cámara fija --$25000--</option>
+                    <option value="camara-domo">Cámara domo --$30000--</option>
+                    <option value="camara-bullet">Cámara bullet --$27000--</option>
+                    <option value="camara-oculta">Cámara oculta --$28000--</option>
+                    <option value="camara-panoramica">Cámara panorámica --$32000--</option>
+                    <option value="camara-ip">Cámara IP --$29000--</option>
+                </select>
+
+                <label for="cantidad-custodias">Cantidad de custodias:</label>
+                <select id="cantidad-custodias" name="cantidad-custodias" disabled>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <label for="cantidad-alarmas">Cantidad de alarmas:</label>
+                <select id="cantidad-alarmas" name="cantidad-alarmas" disabled>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <p><b>Costo Total: <span id="costo-total">$0</span></b></p>
+                <button type="button" onclick="calcularCosto()">Calcular Costo</button>
+
+                <label for="mensaje-presupuesto">Mensaje adicional:</label>
+                <textarea id="mensaje-presupuesto" name="mensaje" placeholder="Puedes agregar comentarios y los costos de tu/s busqueda/s aqui y te enviaremos toda la informacion necesaria... "></textarea>
+
+                <button type="submit">Solicitar Presupuesto</button>
+            </form>
+            
+        </div>
+        <img src="img/camara gif.gif.gif" alt="GIF" class="gif">
+
+    </section>
+   
+    <script src="trabajofinal.js"></script>
+</body>
+</html>

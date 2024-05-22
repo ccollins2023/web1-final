@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #444444;
+    text-shadow: 5%;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid #f5b403;
+    border-radius: 10px;
+    background-color: #a9a9a988;
+}
+
+.container h2 {
+    color: #ffffff;
+    padding: 5px;
+    box-shadow: 0px 5px 10px #0000005e;
+    text-shadow: 0px 0px 10px #0b0b0b;
+    border-radius: 10px;
+    background-color: #f5b403;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ff9900; /* Cambiado para evitar el borde desbordante */
+}
+
+textarea {
+    height: 120px; /* Ajusta esta altura según tus necesidades */
+    resize: vertical; /* Permite el redimensionamiento solo vertical */
+}
+
+button {
+    background-color: #eda43ea3;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajustado el box-shadow */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+
+#costo-total {
+    color: #ff0000;
+}
+
+.gif {
+    margin-right: -30px;
+    width: 20%; /* Ajusta el ancho deseado */
+    height: auto;
+    position: fixed;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    z-index: 9999; /* Asegura que el GIF esté por encima de otros elementos */
+}
